@@ -96,6 +96,8 @@ install_pacman_packages() {
     fcitx5-chinese-input
     cowsay
     lolcat
+    hyprshot
+    tumbler
     hyprland
     hyprlock
     hyprpaper
@@ -135,7 +137,6 @@ install_pacman_packages() {
     wl-clipboard
     xdg-desktop-portal-hyprland
     xdg-desktop-portal-gtk
-    grim
     slurp
     swaybg
     polkit-gnome
