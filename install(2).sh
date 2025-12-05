@@ -10,7 +10,7 @@ install_yay_packages() {
   aur_packages=(
     fortune-mod-off
     proton-ge-custom-bin
-    youtube-music-bin
+    youtube-music-desktop-bin
     wayscriber
     gslapper
     waypaper
