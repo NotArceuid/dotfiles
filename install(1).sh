@@ -113,6 +113,7 @@ install_pacman_packages() {
     fuzzel
     stow
     sudo
+    vlc-plugin-ffmpeg
     vlc
     waybar
     wine
