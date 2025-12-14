@@ -90,9 +90,6 @@ install_pacman_packages() {
     github-cli
     gparted
     nvim
-    htop
-    btop
-    fcitx5
     fcitx5-chinese-input
     cowsay
     lolcat

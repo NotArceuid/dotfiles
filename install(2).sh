@@ -13,6 +13,7 @@ install_yay_packages() {
     youtube-music-for-desktop-bin
     wayscriber
     gslapper
+    htop-vim
     waypaper
   )
 
