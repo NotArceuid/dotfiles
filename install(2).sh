@@ -1,28 +1,33 @@
-# Install packages with yay
 install_yay_packages() {
-  info "Installing AUR packages..."
+	echo "Installing AUR packages..."
 
-  if ! command -v yay &>/dev/null; then
-    error "yay is not installed"
-    exit 1
-  fi
+	if ! command -v yay &>/dev/null; then
+		echo "yay is not installed"
+		echo "Installing yay"
 
-  aur_packages=(
-    fortune-mod-off
-    proton-ge-custom-bin
-    youtube-music-for-desktop-bin
-    wayscriber
-    gslapper
-    htop-vim
-    waypaper
-  )
+		git clone https://aur.archlinux.org/yay.git
+		cd yay
+		makepkg -si
+		cd ..
 
-  for package in "${aur_packages[@]}"; do
-    info "Installing $package..."
-    yay -S --needed --noconfirm "$package" || warn "Failed to install $package"
-  done
+		exit 1
+	fi
 
-  log "AUR packages installation completed"
+	aur_packages=(
+		proton-ge-custom-bin
+		youtube-music-for-desktop-bin
+		wayscriber
+		gslapper
+		htop-vim
+		waypaper
+	)
+
+	for package in "${aur_packages[@]}"; do
+		echo "Installing $package..."
+		yay -S --needed --noconfirm "$package" || warn "Failed to install $package"
+	done
+
+	echo "AUR packages installation completed"
 }
 
 install_yay_packages

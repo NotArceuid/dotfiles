@@ -1,6 +1,13 @@
 # Dotfiles 
 
-my dotfiles for archlinux.
-do whatever the fuck you want with it. 
+Wallpapers are placed in ./img/wallpapers
+Icons are placed in ./img/icons
 
-will change anytime lol
+- Install(1).sh 
+>    This file installs arch packages through pacman
+- Install(2).sh 
+>    This file installs aur packages through yay
+- Install(3).sh 
+>    This file setups the config for you
+
+Will be nuked anytime lol
