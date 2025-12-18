@@ -1,0 +1,120 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "~/.dotfiles/img/icons/sk.webp",
+    "type": "kitty",
+    "height": 16,
+    "padding": {
+      "top": 2,
+      "left": 5,
+      "right": 5
+    }
+  },
+  "display": {
+    "separator": ": "
+  },
+  "modules": [
+    {
+      "type": "title"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m────────────────────────────────────────────────────"
+    },
+    {
+      "type": "os",
+      "key": "\u001b[34m \u001b[36mOS",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "kernel",
+      "key": "\u001b[34m󰌢 \u001b[36mKernel",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "uptime",
+      "key": "\u001b[34m󰅐 \u001b[36mUptime",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "packages",
+      "key": "\u001b[34m󰏗 \u001b[36mPackages",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "shell",
+      "key": "\u001b[34m \u001b[36mShell",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "terminal",
+      "key": "\u001b[34m \u001b[36mTerminal",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "wm",
+      "key": "\u001b[34m \u001b[36mWM",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "de",
+      "key": "\u001b[34m󰇄 \u001b[36mDE",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈◈"
+    },
+    {
+      "type": "cpu",
+      "key": "\u001b[34m \u001b[36mCPU",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "gpu",
+      "key": "\u001b[34m󰹑 \u001b[36mGPU",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "memory",
+      "key": "\u001b[34m󰍛 \u001b[36mRAM",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "monitor",
+      "key": "\u001b[34m󰍹 \u001b[36mMonitor",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "command",
+      "key": "\u001b[34m󰃵 \u001b[36mOS Birthday",
+      "keyColor": "cyan",
+      "format": "{1}",
+      "command": "birth_install=$(stat -c %W / 2>/dev/null || echo \"0\"); if [ \"$birth_install\" != \"0\" ]; then date -d @$birth_install '+%d %b %Y'; else echo \"Unknown\"; fi"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    },
+    {
+      "type": "command",
+      "key": "\u001b[34m󰈔 \u001b[36mEditor",
+      "text": "pacman -Q nvim",
+      "keyColor": "cyan"
+    },
+    {
+      "type": "command",
+      "key": "󰃵 OS Birthday",
+      "keyColor": "cyan",
+      "text": "birth_install=$(stat -c %W /); echo $(date -d @$birth_install '+%d %b %Y')"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m════════════════════════════════════════════════════"
+    },
+    {
+      "type": "custom",
+      "format": "\u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m"
+    },
+  ]
+}
