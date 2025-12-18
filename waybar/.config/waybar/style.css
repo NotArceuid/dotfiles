@@ -19,13 +19,11 @@ window#waybar {
 #clock.3,
 #memory,
 #cpu,
+#disk,
 #battery,
 #network,
-#pulseaudio,
-#disk {
+#pulseaudio {
 	background: #1a1a1a;
-	opacity:1;
-
 }
 
 #tray {
@@ -34,27 +32,29 @@ window#waybar {
 
 #clock.1 {
 	border: 0px solid #d4b449;
-	border-width: 0px 0px 0px 1px;
-	opacity: 1;
+	border-width: 0px 0px 0px 0px;
 }
 
 #clock.3 {
 	border: 0px solid #d4b449;
 	border-width: 0px 1px 0px 0px;
-	opacity:1;
 }
 
+#clock.2 {
+  border: 0px solid #d4b449;
+  border-width: 0px 0px 0px 0px;
+}
 
 #workspaces {
 	border: 1px solid #d4b449; 	
-	border-top: 0px;
 	border-bottom: 0px;
 	border-left:0px;
+	border-right:0px;
 	border-radius: 0px;
 }
 
 #workspaces button {
-	padding: 0px 12px;
+	padding: 0px 8px;
 	margin: 0px 0px;
 	color: #fdf6e3;	
 	border: 1px solid #d4b449; 	
@@ -77,6 +77,10 @@ window#waybar {
 	color: #d4b449
 }
 
+#name {
+  font-size: 3px;
+}
+
 #pipewire {
 	color: #268bd2;
 	opacity:1;
@@ -97,6 +101,7 @@ window#waybar {
 	color: #b58900;
 	opacity:1;
 }
+
 #network {
 	margin-right: 2px;
 	padding-right: 5px;

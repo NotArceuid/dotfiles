@@ -4,14 +4,27 @@
   "layer": "top",
   "position": "top",
   "modules-left": [
-    "custom/profile",
-    "hyprland/workspaces"
-  ],
-  "modules-center": [
     "clock#1",
     "clock#2",
     "clock#3"
   ],
+  "modules-center": [
+    "group/profile"
+  ],
+  "image#shoaki": {
+    "path": "/home/soraa/.dotfiles/img/icons/sk.webp",
+    "size": 32
+  },
+  "group/profile": {
+    "orientation": "vertical",
+    "modules": [
+      "hyprland/workspaces"
+    ]
+  },
+  "custom/name": {
+    "exec": "whoami",
+    "format": "{text}"
+  },
   "modules-right": [
     "tray",
     "pulseaudio",
@@ -22,19 +35,15 @@
     "network"
   ],
   "pulseaudio": {
-    "format": " {volume}%",
+    "format": "{icon}  {volume}%",
     "format-bluetooth": "{volume}% ",
     "format-muted": "",
     "format-icons": {
       "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
       "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
-      "headphones": "",
-      "handsfree": "",
-      "headset": "",
       "phone": "",
       "phone-muted": "",
       "portable": "",
-      "car": "",
       "default": [
         "",
         ""
@@ -46,7 +55,7 @@
   "network": {
     "interface": "wlan*",
     "tooltip-format": "{essid}",
-    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-wifi": "  {signalStrength}% ",
     "format-ethernet": "{ifname} ",
     "format-disconnected": "",
     "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
@@ -54,7 +63,6 @@
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50
   },
-  "custom/profile": {},
   "hyprland/workspaces": {
     "persistent-workspaces": {
       "1": [],
@@ -96,11 +104,11 @@
   },
   "memory": {
     "interval": 5,
-    "format": "Mem {}%"
+    "format": "RAM:{}%"
   },
   "cpu": {
     "interval": 5,
-    "format": "CPU {usage:2}%"
+    "format": "CPU:{usage:2}%"
   },
   "battery": {
     "states": {
@@ -119,7 +127,7 @@
   },
   "disk": {
     "interval": 5,
-    "format": "Disk {percentage_used:2}%",
+    "format": "Disk:{percentage_used:2}%",
     "path": "/"
   },
   "tray": {
