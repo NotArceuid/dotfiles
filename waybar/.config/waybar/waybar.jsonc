@@ -9,17 +9,39 @@
     "clock#3"
   ],
   "modules-center": [
-    "group/profile"
+    "group/profile",
+    "hyprland/workspaces"
   ],
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    },
+    "format": "{icon}",
+    "format-icons": {
+      "1": "🜂",
+      "2": "🜄",
+      "3": "*",
+      "4": "🜁",
+      "5": "🜃"
+    },
+    "seperate-outputs": true,
+    "all-outputs": true,
+    "show-special": true,
+    "sort-by-number": true,
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1"
+  },
   "image#shoaki": {
     "path": "/home/soraa/.dotfiles/img/icons/sk.webp",
     "size": 32
   },
   "group/profile": {
     "orientation": "vertical",
-    "modules": [
-      "hyprland/workspaces"
-    ]
+    "modules": []
   },
   "custom/name": {
     "exec": "whoami",
@@ -62,29 +84,6 @@
     "tooltip-format-ethernet": "{ifname} ",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50
-  },
-  "hyprland/workspaces": {
-    "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": []
-    },
-    "format": "{icon}",
-    "format-icons": {
-      "1": "🜍",
-      "2": "🜂",
-      "3": "🜄",
-      "4": "🜁",
-      "5": "🜃"
-    },
-    "seperate-outputs": true,
-    "all-outputs": true,
-    "show-special": true,
-    "sort-by-number": true,
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1"
   },
   "hyprland/window": {
     "seperate-outputs": true
