@@ -15,7 +15,7 @@ install_yay_packages() {
 
   aur_packages=(
     proton-ge-custom-bin
-    youtube-music-for-desktop-bin
+    youtube-tui
     wayscriber
     gslapper
     htop-vim
