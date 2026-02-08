@@ -15,7 +15,7 @@ install_yay_packages() {
 
   aur_packages=(
     proton-ge-custom-bin
-    youtube-tui
+    discordrp-mpris-git
     wayscriber
     gslapper
     htop-vim
