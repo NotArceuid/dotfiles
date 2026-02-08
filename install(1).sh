@@ -79,7 +79,7 @@ install_pacman_packages() {
     wine
     thunar
     telegram-desktop
-    yazi 
+    yazi
     python
     python-pip
     nodejs
@@ -106,7 +106,7 @@ install_pacman_packages() {
     noto-fonts-emoji
     ttf-jetbrains-mono
     ttf-jetbrains-mono-nerd
-)
+  )
 
   echo "Installing core packages..."
   pacman -S --needed --noconfirm "${core_packages[@]}"
@@ -122,3 +122,5 @@ install_all() {
   install_pacman_packages
   cleanup
 }
+
+install_all

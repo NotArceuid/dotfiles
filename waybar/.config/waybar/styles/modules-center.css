@@ -1,0 +1,122 @@
+/*------------------
+    window count
+------------------*/
+
+#windowcount {
+	margin-right: 12px;
+}
+#windowcount label {
+	color: @hover-fg;
+}
+
+/*-----------------
+    temperature
+-----------------*/
+
+#custom-left_div.2 {
+	color: @temperature;
+}
+#temperature {
+	background-color: @temperature;
+}
+
+/*------------
+    memory
+------------*/
+
+#custom-left_div.3 {
+	background-color: @temperature;
+	color: @memory;
+}
+#memory {
+	background-color: @memory;
+}
+
+/*---------
+    cpu
+---------*/
+
+#custom-left_div.4 {
+	background-color: @memory;
+	color: @cpu;
+}
+#cpu {
+	background-color: @cpu;
+  color: #000;
+}
+
+#custom-left_inv.1 {
+	color: @cpu;
+}
+
+/*-----------------
+    distro icon
+-----------------*/
+
+#custom-left_div.5,
+#custom-right_div.2 {
+  font-size: 18px;
+	color: @main;
+}
+#custom-distro {
+	padding: 0 10px 0 4px;
+	background-color: @main;
+	color: @main-bg;
+}
+
+/*--------------------
+    idle inhibitor
+--------------------*/
+
+#custom-right_inv.1 {
+  font-size: 18px;
+	color: @time;
+}
+#idle_inhibitor {
+  color: #000;
+	background-color: @time;
+}
+
+/*----------
+    time
+----------*/
+
+#clock.time {
+  color: #000;
+	padding-right: 6px;
+	background-color: @time;
+}
+#custom-right_div.3 {
+  font-size: 18px;
+	background-color: @date;
+	color: @time;
+}
+
+/*----------
+    date
+----------*/
+
+#clock.date {
+	padding-left: 6px;
+	background-color: @date;
+}
+#custom-right_div.4 {
+  font-size: 18px;
+	background-color: @tray;
+	color: @date;
+}
+
+/*-----------------
+    system tray
+-----------------*/
+
+#network,
+#bluetooth,
+#custom-system_update {
+	background-color: @tray;
+	padding: 0 6px 0 2px;
+}
+#custom-right_div.5 {
+  font-size: 18px;
+	color: @tray;
+}

@@ -1,0 +1,40 @@
+/*--------------
+    username
+--------------*/
+
+#custom-user {
+	padding-right: 12px;
+}
+
+/*----------------
+    workspaces
+----------------*/
+
+#custom-left_div.1,
+#custom-right_div.1 {
+  font-size: 18px;
+	color: @workspaces;
+}
+
+#workspaces {
+	background-color: @workspaces;
+}
+
+#workspaces button.active,
+#workspaces button.visible,
+#workspaces button:hover{
+  color: #fff;
+  background-color: #fff;
+}
+
+#workspaces button label {
+	color: #2b2834; 
+}
+
+/*------------------
+    window title
+------------------*/
+
+#window {
+	margin-left: 12px;
+}
