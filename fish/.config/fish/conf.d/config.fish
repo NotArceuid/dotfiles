@@ -12,4 +12,8 @@ export GEM_HOME=$HOME/.gem
 function fish_greeting
 end
 
+function ssh
+    env TERM=xterm-256color ssh $argv
+end
+
 neofetch
