@@ -270,9 +270,7 @@ hl.bind(mainMod .. " + G", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + SHIFT + G", hl.dsp.window.float({ action = "toggle" }))
 
 -- Utilities
-hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("hyprshade on blue-light-filter"))
-hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("hyprshade on vibrance")) -- Note: conflicts with exit, you may want to change one
-hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd("pkill -SIGUSR1 wayscriber"))
+hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("pkill -SIGUSR1 wayscriber"))
 hl.bind(mainMod .. " + SHIFT + Y", hl.dsp.exec_cmd("~/.dotfiles/Scripts/reload.sh"))
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("hyprpicker"))
 
