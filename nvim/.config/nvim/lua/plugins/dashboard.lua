@@ -27,4 +27,49 @@ return {
       },
     },
   },
+  {
+    "olimorris/codecompanion.nvim",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+    keys = {
+      { "<leader>aa", "<cmd>CodeCompanionChat Toggle<cr>", desc = "AI Chat" },
+    },
+    opts = {
+      system_prompt = "Only give what is needed, don't give what is more than necessary. Don't explain the code unless asked to. Always list out what have been changed in a short noted with bulletins.",
+      -- NOTE: The log_level is in `opts.opts`
+      opts = {
+        log_level = "DEBUG", -- or "TRACE"
+      },
+      display = {
+        chat = {
+          show_settings = true,
+        },
+      },
+      -- Add these strategies and adapters
+      strategies = {
+        chat = {
+          adapter = "ollama",
+        },
+        inline = {
+          adapter = "ollama",
+        },
+      },
+      adapters = {
+        ollama = function()
+          return require("codecompanion.adapters").extend("ollama", {
+            schema = {
+              model = {
+                default = "qwen2.5-coder:3b",
+              },
+              num_ctx = {
+                default = 8192,
+              },
+            },
+          })
+        end,
+      },
+    },
+  },
 }

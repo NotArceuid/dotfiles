@@ -208,7 +208,7 @@ hl.config({
 hl.config({
 	misc = {
 		force_default_wallpaper = -1, -- Set to 0 or 1 to disable the anime mascot wallpapers
-		disable_hyprland_logo = false, -- If true disables the random hyprland logo / anime girl background. :(
+		disable_hyprland_logo = true, -- If true disables the random hyprland logo / anime girl background. :(
 	},
 })
 
@@ -259,15 +259,15 @@ hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + TAB", hl.dsp.window.close()) -- killactive
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exit()) -- exit
 hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("hyprlock"))
-hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(browser))
-hl.bind(mainMod .. " + S", hl.dsp.exec_cmd(fileManager))
-hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(fileManagerUI))
-hl.bind(mainMod .. " + SHIFT + G", hl.dsp.exec_cmd("kitty btop"))
+hl.bind(mainMod .. " + Z", hl.dsp.exec_cmd(browser))
+hl.bind(mainMod .. " + X", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + SHIFT + X", hl.dsp.exec_cmd(fileManagerUI))
+hl.bind(mainMod .. " + SHIFT + C", hl.dsp.exec_cmd("kitty btop"))
 hl.bind(mainMod .. " + U", hl.dsp.exec_cmd(menu))
 
 -- Window states
-hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
-hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + G", hl.dsp.window.fullscreen())
+hl.bind(mainMod .. " + SHIFT + G", hl.dsp.window.float({ action = "toggle" }))
 
 -- Utilities
 hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd("hyprshade on blue-light-filter"))
@@ -303,10 +303,9 @@ end)
 -- Resize submap
 hl.bind(mainMod .. " + T", hl.dsp.submap("resize"))
 
--- Switch workspaces with mainMod + [0-9]
--- Move active window to a workspace with mainMod + SHIFT + [0-9]
-for i = 1, 5 do
-	local key = i
+local workspaceKeys = { "A", "S", "D", "F" }
+
+for i, key in ipairs(workspaceKeys) do
 	hl.bind(mainMod .. " + " .. key, hl.dsp.focus({ workspace = i }))
 	hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
@@ -376,4 +375,28 @@ hl.window_rule({
 
 	move = "20 monitor_h-120",
 	float = true,
+})
+
+hl.workspace_rule({
+	workspace = "1",
+	monitor = "HDMI-A-1",
+	default = true, -- This makes it the default workspace for this monitor
+})
+
+hl.workspace_rule({
+	workspace = "2",
+	monitor = "HDMI-A-1",
+})
+
+-- Bind workspaces 3 and 4 to your second monitor
+-- Replace "DVI-A-1" with whatever your second monitor is named
+hl.workspace_rule({
+	workspace = "3",
+	monitor = "DVI-D-1", -- or "DP-1", "DP-2", etc.
+	default = true, -- This makes it the default workspace for this monitor
+})
+
+hl.workspace_rule({
+	workspace = "4",
+	monitor = "DVI-D-1", -- or whatever your second monitor is named
 })
